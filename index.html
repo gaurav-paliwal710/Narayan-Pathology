@@ -17,8 +17,6 @@
 
 <body>
 
-    <!-- TOP BAR -->
-
     <div class="top-bar">
 
         <div>
@@ -32,8 +30,6 @@
         </div>
 
     </div>
-
-    <!-- HEADER -->
 
     <header>
 
@@ -67,8 +63,6 @@
         </nav>
 
     </header>
-
-    <!-- HERO -->
 
     <section class="hero" id="home">
 
@@ -106,8 +100,6 @@
 
     </section>
 
-    <!-- ABOUT -->
-
     <section class="about" id="about">
 
         <div class="section-title">
@@ -143,19 +135,35 @@
 
             <div class="doctor-card">
 
-                <h3>Dr. Neelima Sachan</h3>
+    <div class="doctor-image">
+        <img src="images/doctor.jpeg" alt="Dr. Neelima Sachan">
+    </div>
 
-                <p>MBBS, MD (Pathology)</p>
+    <h3>Dr. Neelima Sachan</h3>
 
-                <span>Consultant Pathologist</span>
+    <p>MBBS, MD (Pathology)</p>
 
-            </div>
+    <span>Consultant Pathologist</span>
+
+    <div class="doctor-details">
+
+        <div>
+            <strong>15+</strong>
+            <p>Years Experience</p>
+        </div>
+
+        <div>
+            <strong>15000+</strong>
+            <p>Patients Served</p>
+        </div>
+
+    </div>
+
+</div>
 
         </div>
 
     </section>
-
-    <!-- STATS -->
 
     <section class="stats">
 
@@ -192,8 +200,6 @@
         </div>
 
     </section>
-
-    <!-- SERVICES -->
 
     <section class="services" id="services">
 
@@ -245,8 +251,6 @@
 
     </section>
 
-    <!-- WHY CHOOSE US -->
-
     <section class="why-us">
 
         <div class="section-title">
@@ -268,8 +272,6 @@
 
     </section>
 
-    <!-- GALLERY -->
-
     <section class="gallery" id="gallery">
 
         <div class="section-title">
@@ -285,15 +287,13 @@
             <img src="images/gallery 3.jpeg" alt="">
             <img src="images/gallery 4.jpeg" alt="">
             <img src="images/gallery 5.jpeg" alt="">
+            <img src="images/gallery 6.jpeg" alt="">
             <img src="images/gallery 7.jpeg" alt="">
             <img src="images/gallery 8.jpeg" alt="">
-            <img src="images/gallery 9.jpeg" alt="">
 
         </div>
 
     </section>
-
-    <!-- HOME COLLECTION -->
 
     <section class="home-collection">
 
@@ -317,8 +317,6 @@
         </div>
 
     </section>
-
-    <!-- TESTIMONIALS -->
 
     <section class="testimonials">
 
@@ -355,8 +353,6 @@
 
     </section>
 
-    <!-- FAQ -->
-
     <section class="faq" id="faq">
 
         <div class="section-title">
@@ -390,8 +386,6 @@
         </div>
 
     </section>
-
-    <!-- CONTACT -->
 
     <section class="contact" id="contact">
 
@@ -449,8 +443,6 @@
 
     </section>
 
-    <!-- MAP -->
-
     <section class="map">
 
         <iframe
@@ -459,8 +451,6 @@
         </iframe>
 
     </section>
-
-    <!-- FOOTER -->
 
     <footer>
 
@@ -476,8 +466,6 @@
 
     </footer>
 
-    <!-- FLOATING BUTTONS -->
-
     <a href="https://wa.me/919506800711"
         class="whatsapp">
 
@@ -491,6 +479,22 @@
         <i class="fas fa-phone"></i>
 
     </a>
+
+    <div id="policyModal" class="policy-modal">
+        <div class="policy-modal-content">
+            <h3>Confidentiality & Impartiality Policy</h3>
+            <div class="policy-body">
+                <p><strong>Patient Welfare:</strong> Laboratory offers its services keeping the patient's welfare as its paramount interest based on Autonomy, Beneficence, Non-maleficence, and Justice[cite: 10, 13, 15, 16, 17].</p>
+                <p><strong>Impartiality:</strong> The laboratory is responsible for the impartiality of its activities and does not allow commercial, financial, or other pressures to compromise impartiality[cite: 66].</p>
+                <p><strong>Confidentiality & Data Protection:</strong> We maintain strict confidentiality of laboratory and patient data[cite: 95]. Information gathered will not be disclosed to a third party without the patient's consent unless required in medico-legal cases[cite: 46, 70]. Patient data obtained after testing is stored securely against loss, tampering, or misuse[cite: 60, 61].</p>
+                <p><strong>Reporting Standards:</strong> The laboratory refrains from producing unreliable reports and ensures that transmission methods are secure and reliable[cite: 41, 51].</p>
+            </div>
+            <div class="policy-modal-buttons">
+                <button id="declinePolicyBtn" class="btn-decline">Decline</button>
+                <button id="acceptPolicyBtn" class="btn-accept">Accept & Send</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

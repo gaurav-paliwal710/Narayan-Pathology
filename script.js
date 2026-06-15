@@ -120,26 +120,31 @@ faqItems.forEach(item => {
 });
 
 // ==========================
-// CONTACT FORM
+// CONTACT FORM & POLICY MODAL
 // ==========================
 
-const contactForm =
-    document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
+const policyModal = document.getElementById("policyModal");
+const acceptPolicyBtn = document.getElementById("acceptPolicyBtn");
+const declinePolicyBtn = document.getElementById("declinePolicyBtn");
 
-contactForm.addEventListener(
-    "submit",
-    function (e) {
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Pause form submission
+    policyModal.classList.add("active"); // Show policy modal
+});
 
-        e.preventDefault();
+// If patient accepts policy rules
+acceptPolicyBtn.addEventListener("click", () => {
+    policyModal.classList.remove("active");
+    alert("Thank you for contacting Narayan Pathology & Biopsy Centre. We will contact you shortly.");
+    contactForm.reset();
+});
 
-        alert(
-            "Thank you for contacting Narayan Pathology & Biopsy Centre. We will contact you shortly."
-        );
-
-        contactForm.reset();
-
-    }
-);
+// If patient declines policy rules
+declinePolicyBtn.addEventListener("click", () => {
+    policyModal.classList.remove("active");
+    alert("Message submission cancelled. You must accept our Privacy & Impartiality Policy to send messages.");
+});
 
 // ==========================
 // SMOOTH SCROLL
