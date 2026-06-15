@@ -1,13 +1,25 @@
 // ==========================
-// MOBILE MENU
+// MOBILE MENU & SUB-MENU DROPDOWN
 // ==========================
 
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+const dropdownParent = document.querySelector(".dropdown");
 
 menuBtn.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
+
+// Toggle Sub-Menu Subdivision on Mobile Devices
+if (dropdownToggle) {
+    dropdownToggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // Stop instant anchor jump on mobile tap
+            dropdownParent.classList.toggle("open-mobile");
+        }
+    });
+}
 
 // ==========================
 // CLOSE MENU ON LINK CLICK
@@ -16,9 +28,11 @@ menuBtn.addEventListener("click", () => {
 document.querySelectorAll("nav a").forEach(link => {
 
     link.addEventListener("click", () => {
-
-        nav.classList.remove("active");
-
+        // Only close mobile container if it is not the main toggle text click
+        if (!link.classList.contains("dropdown-toggle") || window.innerWidth > 768) {
+            nav.classList.remove("active");
+            dropdownParent.classList.remove("open-mobile");
+        }
     });
 
 });
@@ -145,12 +159,13 @@ contactForm.addEventListener(
 // SMOOTH SCROLL
 // ==========================
 
-document.querySelectorAll('a[href^="#"]')
-.forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     anchor.addEventListener(
         "click",
         function (e) {
+            // Let the explicit external PDF page redirect act normally
+            if(this.getAttribute("href").includes(".pdf")) return;
 
             e.preventDefault();
 
