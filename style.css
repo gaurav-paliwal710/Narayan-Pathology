@@ -156,7 +156,7 @@ nav a:hover{
 =========================== */
 
 .hero{
-    min-height:100vh;
+    min-height:115vh;
 
     background:
     linear-gradient(
@@ -164,9 +164,8 @@ nav a:hover{
         rgba(0,0,0,.55)
     ),
     url("images/hero.jpeg");
-
     background-size:cover;
-    background-position:center;
+    background-position: center -2vw;
     background-repeat:no-repeat;
 
     display:flex;
