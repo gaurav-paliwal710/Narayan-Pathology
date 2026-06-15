@@ -936,111 +936,34 @@ footer p{
 }
 
 /* ===========================
-   POLICY MODAL STYLES
+   ABOUT SECTION POLICY BUTTON
 =========================== */
 
-.policy-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    display: none;
-    justify-content: center;
+.btn-policy {
+    display: inline-flex;
     align-items: center;
-    z-index: 10000;
-    padding: 20px;
-}
-
-.policy-modal.active {
-    display: flex;
-}
-
-.policy-modal-content {
-    background: var(--white);
-    max-width: 600px;
-    width: 100%;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-    animation: fadeInModal 0.4s ease;
-}
-
-@keyframes fadeInModal {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.policy-modal-content h3 {
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: transparent;
     color: var(--primary);
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--light);
-    padding-bottom: 10px;
-}
-
-.policy-body {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 25px;
-    padding-right: 10px;
-}
-
-.policy-body p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #444;
-}
-
-.policy-body::-webkit-scrollbar {
-    width: 5px;
-}
-
-.policy-body::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
-
-.policy-modal-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-.btn-accept, .btn-decline {
-    padding: 12px 25px;
-    border-radius: 8px;
+    border: 2px solid var(--primary);
     font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
     font-size: 0.95rem;
+    cursor: pointer;
 }
 
-.btn-accept {
+.btn-policy:hover {
     background: var(--primary);
     color: var(--white);
-    border: none;
-}
-
-.btn-accept:hover {
-    background: var(--secondary);
-}
-
-.btn-decline {
-    background: #e2e8f0;
-    color: var(--dark);
-    border: none;
-}
-
-.btn-decline:hover {
-    background: #cbd5e1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
 }
 
 @media(max-width: 480px) {
-    .policy-modal-buttons {
-        flex-direction: column-reverse;
-    }
-    .btn-accept, .btn-decline {
+    .btn-policy {
         width: 100%;
+        justify-content: center;
     }
 }
